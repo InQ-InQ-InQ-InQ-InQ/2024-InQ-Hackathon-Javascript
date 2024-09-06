@@ -8,11 +8,9 @@
 
 ## 📮 미션 제출 방법
 
-- 미션 구현을 완료한 후 GitHub을 통해 제출해야 한다.
-  - GitHub을 활용한 제출 방법은 [프리코스 과제 제출](https://github.com/woowacourse/woowacourse-docs/tree/master/precourse) 문서를 참고해 제출한다.
-- GitHub에 미션을 제출한 후 [우아한테크코스 지원](https://apply.techcourse.co.kr) 사이트에 접속하여 프리코스 과제를 제출한다.
-  - 자세한 방법은 [제출 가이드](https://github.com/woowacourse/woowacourse-docs/tree/master/precourse#제출-가이드) 참고
-  - **Pull Request만 보내고 지원 플랫폼에서 과제를 제출하지 않으면 최종 제출하지 않은 것으로 처리되니 주의한다.**
+- 본 저장소를 개별적으로 클론한다.
+- 클론이 완료된 저장소에서 본인의 깃허브 닉네임을 이름으로 브랜치를 생성 및 체크아웃하고, 해당 브랜치에서 미션을 진행한다.
+- 1차 기능 구현을 완료한 후, `{깃허브 닉네임}:{깃허브 닉네임}` 브랜치에서 `InQ-InQ-InQ-InQ-InQ:main` 브랜치로 Pull Request를 생성한다.
 
 ## 🚨 과제 제출 전 체크 리스트 - 0점 방지
 
@@ -151,24 +149,9 @@ app.play();
 - Jest를 이용하여 본인이 정리한 기능 목록이 정상 동작함을 테스트 코드로 확인한다.
   - 테스트 도구 사용법이 익숙하지 않다면 `__tests__/StringTest.js`를 참고하여 학습한 후 테스트를 구현한다.
 
-### 라이브러리
-
-- `@woowacourse/mission-utils`에서 제공하는 `Random` 및 `Console` API를 사용하여 구현해야 한다.
-  - Random 값 추출은 `Random.pickNumberInRange()`를 활용한다.
-  - 사용자의 값을 입력 받고 출력하기 위해서는 `Console.readLineAsync`, `Console.print`를 활용한다.
-
-#### 사용 예시
-
-- 0에서 9까지의 정수 중 한 개의 정수 반환
-
-```javascript
-MissionUtils.Random.pickNumberInRange(0, 9);
-```
-
 ## ✏️ 과제 진행 요구 사항
 
-- 미션은 [javascript-racingcar-6](https://github.com/woowacourse-precourse/javascript-racingcar-6) 저장소를 Fork & Clone해 시작한다.
+- 미션은 [javascript-racingcar-6](https://github.com/InQ-InQ-InQ-InQ-InQ/2024-InQ-Hackathon-Javascript) 저장소를 Fork & Clone해 시작한다.
 - **기능을 구현하기 전 `docs/README.md`에 구현할 기능 목록을 정리**해 추가한다.
 - **Git의 커밋 단위는 앞 단계에서 `docs/README.md`에 정리한 기능 목록 단위**로 추가한다.
   - [커밋 메시지 컨벤션](https://gist.github.com/stephenparish/9941e89d80e2bc58a153) 가이드를 참고해 커밋 메시지를 작성한다.
-- 과제 진행 및 제출 방법은 [프리코스 과제 제출](https://github.com/woowacourse/woowacourse-docs/tree/master/precourse) 문서를 참고한다.
