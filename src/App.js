@@ -1,9 +1,22 @@
 import { Console } from "@woowacourse/mission-utils";
+import { MissionUtils } from "@woowacourse/mission-utils";
 
 class App {
   async play() {
     const names = await this.getCarname();
     const times = await this.getTimes();
+    const race = Array(names.length).fill(0);
+    let max = 0;
+
+    for (let i = 0; i < times; i++) {
+      names.forEach((name, index, array) => {
+        race[index] =
+          MissionUtils.Random.pickNumberInRange(0, 9) >= 4
+            ? race[index] + 1
+            : race[index];
+        max = race[index] > max ? race[index] : max;
+      });
+    }
   }
   async getCarname() {
     try {
