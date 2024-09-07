@@ -8,6 +8,8 @@ class App {
     const race = Array(names.length).fill(0);
     let max = 0;
 
+    Console.print("\n실행 결과");
+
     for (let i = 0; i < times; i++) {
       names.forEach((name, index, array) => {
         race[index] =
@@ -15,7 +17,9 @@ class App {
             ? race[index] + 1
             : race[index];
         max = race[index] > max ? race[index] : max;
+        Console.print(`${name} : ${"-".repeat(race[index])}`);
       });
+      Console.print("");
     }
   }
   async getCarname() {
