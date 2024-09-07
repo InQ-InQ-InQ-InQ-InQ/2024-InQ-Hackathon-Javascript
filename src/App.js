@@ -48,9 +48,6 @@ class App {
       }
       return names;
     } catch (error) {
-      if (error instanceof InputError) {
-        throw error;
-      }
       throw error;
     }
   }
@@ -59,14 +56,11 @@ class App {
     try {
       const input = await Console.readLineAsync("시도할 횟수는 몇 회인가요?\n");
       const times = parseInt(input);
-      if (!isNaN(input)) {
-        throw new InputError("시도할 횟수는 숫자로 입력하세요.");
+      if (isNaN(input)) {
+        throw new InputError("[ERROR] 숫자가 잘못된 형식입니다.");
       }
       return times;
     } catch (error) {
-      if (error instanceof InputError) {
-        throw error;
-      }
       throw error;
     }
   }
