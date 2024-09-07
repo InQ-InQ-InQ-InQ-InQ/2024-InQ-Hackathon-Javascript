@@ -21,6 +21,12 @@ class App {
       });
       Console.print("");
     }
+
+    Console.print(
+      `최종 우승자 : ${names
+        .filter((name) => race[names.indexOf(name)] >= max)
+        .join(", ")}`
+    );
   }
   async getCarname() {
     try {
